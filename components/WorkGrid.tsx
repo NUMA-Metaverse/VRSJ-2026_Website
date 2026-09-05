@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { works } from "@/data/works";
+import { publicAsset } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 import { Container, Section } from "./ui/Layout";
 
@@ -12,7 +13,7 @@ export function WorkGrid() {
           {works.map((work, index) => (
             <article className="group reveal grid min-h-82.5 grid-cols-[1.2fr_.8fr] overflow-hidden border border-ink/20 bg-white transition hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(41,65,244,.1)] max-lg:grid-cols-1 max-md:min-h-62.5 max-md:grid-cols-[1.2fr_.8fr] max-[430px]:grid-cols-1" key={work.title}>
               <div className="relative min-h-82.5 overflow-hidden bg-[#dfefff] max-md:min-h-62.5 max-[430px]:min-h-58.5">
-                <Image className="object-cover transition duration-500 group-hover:scale-[1.035]" src={work.image} alt={`${work.title}の作品イメージ`} fill sizes="(max-width: 700px) 100vw, 50vw" />
+                <Image className="object-cover transition duration-500 group-hover:scale-[1.035]" src={publicAsset(work.image)} alt={`${work.title}の作品イメージ`} fill sizes="(max-width: 700px) 100vw, 50vw" />
                 <span className="absolute bottom-3.5 left-3.5 bg-ink/90 px-2 py-1.5 text-[9px] text-white">2025年度作品</span><b className="absolute top-3.5 right-3.5 bg-ink/90 px-2 py-1.5 text-[9px] text-white">{String(index + 1).padStart(2, "0")}</b>
               </div>
               <div className="flex min-h-55 flex-col p-5 max-md:min-h-62.5 max-md:p-4 max-[430px]:min-h-45">

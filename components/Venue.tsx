@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { venueLinks } from "@/data/links";
+import { publicAsset } from "@/lib/site";
 import { SectionHeading } from "./SectionHeading";
 import { Container, Section } from "./ui/Layout";
 
 export function Venue() {
   return (
     <Section id="venue" className="relative bg-white">
-      <Image className="object-cover object-center" src="/background/3.png" alt="" fill sizes="100vw" />
+      <Image className="object-cover object-center" src={publicAsset("/background/3.png")} alt="" fill sizes="100vw" />
       <div className="absolute inset-0 bg-white/70" aria-hidden="true" />
       <Container className="relative z-10">
         <SectionHeading title="開催会場" description="VRデバイスがない方も参加できる配信を予定しています。確定した会場から順次リンクを公開します。" />

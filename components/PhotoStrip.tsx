@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { ActivityPhoto } from "@/data/activityPhotos";
+import { publicAsset } from "@/lib/site";
 
 export function PhotoStrip({ photos, label, direction = "left" }: {
   photos: readonly ActivityPhoto[];
@@ -20,7 +21,7 @@ export function PhotoStrip({ photos, label, direction = "left" }: {
               {photos.map((photo) => (
                 <div className="strip-photo" key={photo.file}>
                   <Image
-                    src={`/images/${photo.file}.webp`}
+                    src={publicAsset(`/images/${photo.file}.webp`)}
                     alt={duplicate ? "" : photo.alt}
                     fill
                     sizes="(max-width: 900px) 200px, (max-width: 1636px) 22vw, 360px"

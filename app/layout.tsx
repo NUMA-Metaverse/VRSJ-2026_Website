@@ -1,36 +1,50 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, siteUrl } from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "全国学生VRサークル活動報告大会 2026",
-  description: "全国学生VRサークル活動報告大会2026の参加・応募案内。サークル活動報告、VR/XR制作発表、参加者同士の交流を行います。主催：全日本大学メタバース連盟（NUMA）。",
+  metadataBase: new URL(`${SITE_URL}/`),
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: "全日本大学メタバース連盟（NUMA）" }],
+  creator: "全日本大学メタバース連盟（NUMA）",
+  publisher: "全日本大学メタバース連盟（NUMA）",
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: {
-    icon: "/icon.svg",
+    icon: siteUrl("/icon.svg"),
   },
   openGraph: {
-    title: "全国学生VRサークル活動報告大会 2026",
-    description: "全国学生VRサークル活動報告大会2026の参加・応募案内。主催：全日本大学メタバース連盟（NUMA）。",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
     type: "website",
     locale: "ja_JP",
+    siteName: SITE_NAME,
+    url: SITE_URL,
     images: [{
-      url: "/ogp.png",
-      width: 7680,
-      height: 4320,
-      alt: "全国学生VRサークル活動報告大会 2026",
+      url: siteUrl("/ogp.jpg"),
+      width: 1200,
+      height: 630,
+      alt: SITE_NAME,
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "全国学生VRサークル活動報告大会 2026",
-    description: "全国学生VRサークル活動報告大会2026の参加・応募案内。主催：全日本大学メタバース連盟（NUMA）。",
-    images: ["/ogp.png"],
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [siteUrl("/ogp.jpg")],
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f7f5ec",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

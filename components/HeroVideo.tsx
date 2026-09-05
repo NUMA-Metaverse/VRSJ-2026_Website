@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { publicAsset } from "@/lib/site";
 
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -22,7 +23,7 @@ export function HeroVideo() {
   return (
     <div className="relative aspect-video min-h-70 overflow-hidden bg-ink max-lg:min-h-0">
       <video ref={videoRef} className="h-full w-full object-cover" autoPlay muted loop playsInline preload="metadata" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} aria-label="大会紹介映像">
-        <source src="/video/Demo.mp4" type="video/mp4" />
+        <source src={publicAsset("/video/Demo.mp4")} type="video/mp4" />
       </video>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-linear-to-t from-ink/75 to-transparent p-4 text-white">
         <span className="text-xs font-bold">大会紹介映像</span>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAsset } from "@/lib/site";
 import { MotionReveal } from "./ui/MotionReveal";
 
 export function About() {
@@ -27,7 +28,7 @@ export function About() {
             <figure className="collage-main">
               <div>
                 <Image
-                  src="/images/kait-vr.webp"
+                  src={publicAsset("/images/kait-vr.webp")}
                   alt="星空が広がるワールドに集まるサークルの仲間たち"
                   fill
                   sizes="(max-width: 760px) 80vw, 38vw"
@@ -37,7 +38,7 @@ export function About() {
             <figure className="collage-small">
               <div>
                 <Image
-                  src="/images/hokudai-metaken.webp"
+                  src={publicAsset("/images/hokudai-metaken.webp")}
                   alt="アバター姿で記念撮影を楽しむ学生たち"
                   fill
                   sizes="(max-width: 760px) 48vw, 22vw"
