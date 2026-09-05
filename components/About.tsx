@@ -1,0 +1,53 @@
+import Image from "next/image";
+import { MotionReveal } from "./ui/MotionReveal";
+
+export function About() {
+  return (
+    <section
+      className="about section-space"
+      id="about"
+      aria-labelledby="about-title"
+    >
+      <div className="page-container">
+        <div className="about-layout">
+          <MotionReveal className="about-copy">
+            <h2 id="about-title">大会について</h2>
+            <p>
+              全国学生VRサークル活動報告大会では、各サークルの活動報告、学生によるVR/XR制作物の発表、参加者同士の交流を行います。
+            </p>
+            <p>
+              活動内容や運営方法、制作の技術や工夫を共有し、大学・サークル間の交流を深めることを目的としています。
+            </p>
+            <p>主催：全日本大学メタバース連盟（NUMA）</p>
+          </MotionReveal>
+          <MotionReveal className="photo-collage" effect="photo" delay={0.12}>
+            <span className="collage-star" aria-hidden="true">
+              ✳
+            </span>
+            <figure className="collage-main">
+              <div>
+                <Image
+                  src="/images/kait-vr.webp"
+                  alt="星空が広がるワールドに集まるサークルの仲間たち"
+                  fill
+                  sizes="(max-width: 760px) 80vw, 38vw"
+                />
+              </div>
+            </figure>
+            <figure className="collage-small">
+              <div>
+                <Image
+                  src="/images/hokudai-metaken.webp"
+                  alt="アバター姿で記念撮影を楽しむ学生たち"
+                  fill
+                  sizes="(max-width: 760px) 48vw, 22vw"
+                />
+              </div>
+            </figure>
+          </MotionReveal>
+        </div>
+        <p className="photo-credit">掲載写真は各サークルの活動風景です。</p>
+      </div>
+    </section>
+  );
+}

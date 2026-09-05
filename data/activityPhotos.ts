@@ -1,0 +1,39 @@
+export type ActivityPhoto = {
+  file: string;
+  alt: string;
+};
+
+// 3本の写真帯には異なる写真を割り当てる。ファイル名は public/images 内のもの。
+export const heroPhotos: readonly ActivityPhoto[] = [
+  { file: "kait-vr", alt: "星空のワールドでのサークル集合写真" },
+  { file: "neptunity", alt: "室内ワールドで集まるサークルのメンバー" },
+  { file: "2026-09-05-17-48-01", alt: "月を背景にしたステージでの記念撮影" },
+  { file: "yuvr", alt: "花で飾られたワールドでの集合写真" },
+  { file: "ku-virtual", alt: "展示の前に集まるサークルのメンバー" },
+  { file: "43343", alt: "夕暮れの花畑のワールドでの記念撮影" },
+  { file: "hit-metaverse", alt: "サークル紹介のクイズパネルの前での活動風景" },
+  { file: "kasou-kuukan-kenkyukai", alt: "食事をテーマにしたワールドでの交流風景" },
+  { file: "svrc", alt: "サークルのメンバーによる集合写真" },
+];
+
+export const preEntryPhotos: readonly ActivityPhoto[] = [
+  { file: "6446", alt: "水中を見渡せるワールドでの集合写真" },
+  { file: "525525", alt: "青空のワールドに集まる学生たち" },
+  { file: "hit04", alt: "和室のテーブルを囲んで交流するメンバー" },
+  { file: "vrchat-2026-04-23-21-59-18-007-3840x2160-1", alt: "星空のワールドでポーズを取るアバター" },
+  { file: "33232", alt: "円になって集まったアバターを上から撮影した写真" },
+  { file: "1213", alt: "ワールド内の自動販売機の前での記念撮影" },
+  { file: "6565564", alt: "テーブル上の展示を囲んで集まるメンバー" },
+  { file: "64644", alt: "星空の広がるワールドを見上げるメンバー" },
+];
+
+export const postEntryPhotos: readonly ActivityPhoto[] = [
+  { file: "5656", alt: "バーチャル空間でのメンバー同士の記念撮影" },
+  { file: "3232", alt: "2026年の文字の前でポーズを取るメンバー" },
+  { file: "1212212", alt: "椅子を並べて話し合うサークルの活動風景" },
+  { file: "6354", alt: "夜の森のワールドで集まるメンバー" },
+  { file: "hokudai-metaken", alt: "アバター姿で記念撮影をする学生たち" },
+  { file: "nu-digital", alt: "室内に集まって撮影したアバターの集合写真" },
+  { file: "yamato-university-vr", alt: "夜の自然を背景にしたワールドでの記念撮影" },
+  { file: "vrchat-2026-04-10-23-50-47-947-1920x1080", alt: "チェス盤を囲んで遊ぶメンバー" },
+];
