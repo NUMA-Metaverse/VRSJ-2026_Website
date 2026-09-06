@@ -10,9 +10,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
-  icons: {
-    icon: siteUrl("/icon.svg"),
-  },
   openGraph: {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
