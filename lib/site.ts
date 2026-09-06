@@ -2,7 +2,7 @@ const fallbackSiteUrl = "https://numa-metaverse.github.io/vr-circlemeeting2026";
 
 export const SITE_NAME = "全国学生VRサークル活動報告大会 2026";
 export const SITE_DESCRIPTION =
-  "全国学生VRサークル活動報告大会＆XR制作物プレゼン2026の登壇エントリー案内。2026年10月10日・11日オンライン開催。主催：全日本大学メタバース連盟（NUMA）。";
+  "全国学生VRサークル活動報告大会＆XR制作物プレゼン2026の登壇エントリー案内。2026年10月10日・11日オンライン開催。";
 
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl

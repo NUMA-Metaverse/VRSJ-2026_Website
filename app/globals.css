@@ -77,7 +77,6 @@ p, h1, h2, h3, figure { margin: 0; }
 .photo-collage img { object-fit: cover; }
 .collage-main { width: 90%; transform: rotate(5deg); position: absolute; top: 15px; right: 0; }
 .collage-small { position: absolute; width: 57%; bottom: -5px; left: -5px; transform: rotate(-8deg); }
-.collage-star { position: absolute; left: -25px; top: -25px; font-size: 118px; line-height: 1; color: var(--red); z-index: 2; -webkit-text-stroke: 2px var(--black); }
 .about-topics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 65px; border-block: 1px solid var(--black); }
 .about-topics > div { padding: 24px 25px; position: relative; }
 .about-topics > div:first-child { padding-left: 0; }
@@ -138,9 +137,7 @@ p, h1, h2, h3, figure { margin: 0; }
 .archive-arrow { font-size: 28px; margin-left: auto; }
 .site-footer { background: var(--black); color: var(--paper); padding-top: 30px; overflow: hidden; }
 .footer-content { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 42px; }
-.organizer-label { color: var(--yellow); font-size: 10px; }
-.footer-organizer { font-size: 22px; font-weight: 900; margin-top: 13px; }
-.footer-event { font-size: 11px; margin-top: 10px; color: #c4c3bc; }
+.footer-event { font-size: 13px; font-weight: 800; color: var(--paper); }
 .footer-top { display: flex; align-items: center; gap: 28px; font-size: 12px; font-weight: 700; }
 .footer-top span { display: grid; place-items: center; width: 45px; height: 45px; border: 1px solid #ffffff70; font-size: 23px; transition: background .2s, color .2s; }
 .footer-top:hover span { background: var(--yellow); color: var(--black); }
@@ -177,7 +174,6 @@ p, h1, h2, h3, figure { margin: 0; }
   .photo-collage { min-height: 330px; width: min(440px, 100%); margin: 15px auto; }
   .collage-main { width: 88%; }
   .collage-small { width: 56%; bottom: 5px; left: 5px; }
-  .collage-star { font-size: 88px; top: -10px; left: 0; }
   .about-topics { grid-template-columns: 1fr; margin-top: 25px; }
   .about-topics > div, .about-topics > div:first-child { padding: 22px 0 22px 39px; }
   .about-topics > div + div { border-left: none; border-top: 1px solid #17171735; }
@@ -210,8 +206,7 @@ p, h1, h2, h3, figure { margin: 0; }
   .archive-links strong { font-size: 32px; }
   .archive-links a > span:nth-child(2) { font-size: 10px; }
   .footer-content { align-items: flex-start; padding-block: 30px; }
-  .footer-organizer { font-size: 17px; }
-  .footer-event { font-size: 9px; }
+  .footer-event { max-width: 210px; font-size: 10px; line-height: 1.7; }
   .footer-top { font-size: 0; gap: 0; }
   .footer-top span { width: 39px; height: 39px; }
   .footer-bottom { flex-direction: column; gap: 9px; }

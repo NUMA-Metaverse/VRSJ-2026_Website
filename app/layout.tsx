@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   title: SITE_NAME,
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  authors: [{ name: "全日本大学メタバース連盟（NUMA）" }],
-  creator: "全日本大学メタバース連盟（NUMA）",
-  publisher: "全日本大学メタバース連盟（NUMA）",
   alternates: {
     canonical: SITE_URL,
   },

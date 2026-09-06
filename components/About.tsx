@@ -19,12 +19,8 @@ export function About() {
             <p>
               活動内容や運営方法、制作の技術や工夫を共有し、大学・サークル間の交流を深めることを目的としています。
             </p>
-            <p>主催：全日本大学メタバース連盟（NUMA）</p>
           </MotionReveal>
           <MotionReveal className="photo-collage" effect="photo" delay={0.12}>
-            <span className="collage-star" aria-hidden="true">
-              ✳
-            </span>
             <figure className="collage-main">
               <div>
                 <Image
