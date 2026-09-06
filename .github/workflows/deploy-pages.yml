@@ -32,7 +32,6 @@ jobs:
         run: npm ci
 
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v5
 
       - name: Restore Next.js cache
@@ -46,8 +45,7 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          NEXT_PUBLIC_SITE_URL: "https://vrsc-2026.numa-meta.com"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

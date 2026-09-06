@@ -34,7 +34,7 @@
 
 Open Graph・Xのカードには、指定の `public/ogp.png` をそのまま使用。
 `app/layout.tsx` の寸法は実ファイルに合わせて7680×4320。
-本番の絶対URLは `NEXT_PUBLIC_SITE_URL` または `VERCEL_PROJECT_PRODUCTION_URL` から取得する。
+本番の絶対URLは `NEXT_PUBLIC_SITE_URL` から取得し、カスタムドメイン `https://vrsc-2026.numa-meta.com` を使用する。サイトはドメイン直下に配置し、`basePath` は設定しない。
 
 ## 確認
 

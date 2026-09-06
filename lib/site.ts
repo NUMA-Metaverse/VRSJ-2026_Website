@@ -1,4 +1,4 @@
-const fallbackSiteUrl = "https://numa-metaverse.github.io/vr-circlemeeting2026";
+const fallbackSiteUrl = "https://vrsc-2026.numa-meta.com";
 
 export const SITE_NAME = "全国学生VRサークル活動報告大会 2026";
 export const SITE_DESCRIPTION =
@@ -14,6 +14,5 @@ export function siteUrl(path = "") {
 }
 
 export function publicAsset(path: string) {
-  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${normalizedPath}`;
+  return path.startsWith("/") ? path : `/${path}`;
 }
