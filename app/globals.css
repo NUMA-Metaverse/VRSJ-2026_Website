@@ -105,6 +105,25 @@ p, h1, h2, h3, figure { margin: 0; }
 .entry-card-bottom { margin-top: auto; }
 .coming-soon { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 53px; padding: 12px 15px; border-block: 1px solid #17171750; font-size: 12px; font-weight: 800; }
 .entry-detail { font-size: 10px; line-height: 1.9; color: #62615b; margin-top: 12px; }
+.entry-information { display: grid; grid-template-columns: .85fr 1.15fr; margin-top: 42px; border: 2px solid var(--black); background: var(--paper); box-shadow: 6px 6px 0 var(--black); }
+.entry-info-block { padding: 28px 30px; }
+.entry-info-block + .entry-info-block { border-left: 2px solid var(--black); }
+.entry-info-kicker { font: 900 10px/1 var(--font-mono); letter-spacing: .12em; }
+.entry-info-block h3, .entry-notice h3 { margin-top: 10px; font-size: 20px; font-weight: 900; }
+.event-dates { display: grid; gap: 7px; margin-top: 20px; }
+.event-dates time { font-size: clamp(16px, 1.8vw, 22px); font-weight: 900; letter-spacing: -.03em; }
+.entry-info-block > p:last-child { margin-top: 17px; font-size: 10px; line-height: 1.8; color: var(--muted); }
+.deadline-list { margin: 18px 0 0; }
+.deadline-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 10px 0; border-top: 1px solid #17171735; }
+.deadline-list dt { font-size: 10px; font-weight: 800; }
+.deadline-list dd { margin: 0; font-size: 12px; font-weight: 800; text-align: right; }
+.deadline-list .is-emphasis { margin-inline: -10px; padding-inline: 10px; background: var(--yellow); border-top-color: var(--black); }
+.entry-notice { display: grid; grid-template-columns: .72fr 1.4fr auto; gap: 34px; align-items: start; margin-top: 24px; padding: 28px 30px; border: 2px solid var(--black); background: var(--yellow); box-shadow: 6px 6px 0 var(--black); }
+.entry-notice ul { margin: 0; padding-left: 1.3em; font-size: 10px; line-height: 1.9; }
+.entry-notice li + li { margin-top: 5px; }
+.entry-resource-links { display: grid; min-width: 175px; border-top: 1px solid var(--black); }
+.entry-resource-links a { display: flex; justify-content: space-between; gap: 18px; padding: 12px 4px; border-bottom: 1px solid var(--black); font-size: 11px; font-weight: 900; }
+.entry-resource-links a:hover { background: var(--black); color: var(--yellow); padding-inline: 9px; }
 .audience-note { display: flex; align-items: center; gap: 22px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--black); }
 .audience-note h3 { font-size: 17px; font-weight: 900; }
 .audience-note p { font-size: 11px; line-height: 1.9; margin-top: 7px; }
@@ -173,6 +192,15 @@ p, h1, h2, h3, figure { margin: 0; }
   .entry-card-top { margin-bottom: 26px; }
   .entry-card h3 { font-size: 23px; }
   .entry-description { font-size: 12px; }
+  .entry-information { grid-template-columns: 1fr; margin-top: 30px; }
+  .entry-info-block { padding: 24px 21px; }
+  .entry-info-block + .entry-info-block { border-left: 0; border-top: 2px solid var(--black); }
+  .event-dates time { font-size: 17px; }
+  .deadline-list > div { align-items: flex-start; gap: 16px; }
+  .deadline-list dt { max-width: 45%; }
+  .deadline-list dd { font-size: 11px; }
+  .entry-notice { grid-template-columns: 1fr; gap: 20px; padding: 24px 21px; }
+  .entry-resource-links { min-width: 0; }
   .audience-note { align-items: flex-start; gap: 14px; }
   .audience-note h3 { font-size: 14px; }
   .audience-note p { font-size: 10px; }
