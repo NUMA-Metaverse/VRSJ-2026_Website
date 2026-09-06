@@ -57,9 +57,6 @@ p, h1, h2, h3, figure { margin: 0; }
 .photo-set { display: flex; flex-shrink: 0; gap: 4px; padding-right: 4px; }
 .strip-photo { position: relative; width: clamp(200px, 22vw, 360px); aspect-ratio: 16 / 9; flex-shrink: 0; overflow: hidden; }
 .strip-photo img { object-fit: cover; }
-.photo-track[data-paused="true"] { animation-play-state: paused; }
-.photo-pause { position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #ffffff80; background: #171717e6; color: white; cursor: pointer; }
-.photo-pause:hover { background: var(--black); }
 @keyframes photo-scroll { to { transform: translateX(-50%); } }
 .action-link { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 12px 20px; background: var(--black); color: white; border: 2px solid var(--black); font-size: 13px; font-weight: 800; box-shadow: 4px 4px 0 var(--red); transition: transform .2s, box-shadow .2s; }
 .action-link:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--red); }
@@ -219,7 +216,7 @@ p, h1, h2, h3, figure { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .photo-viewport { overflow-x: auto; }
-  .photo-set[aria-hidden="true"], .photo-pause { display: none; }
+  .photo-set[aria-hidden="true"] { display: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
